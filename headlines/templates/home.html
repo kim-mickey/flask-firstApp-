@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HeadLines</title>
+</head>
+<form>
+    <input type="text" name="publication" placeholder="search"/>
+    <input type="submit" value="submit">
+</form>
+<body>
+<h1>{{source}} Update</h1>
+    {%  for art in article %}
+
+<b><a href="{{art.link}}">{{art.title}}</a></b><br/>
+        <i>{{art.published}}</i><br/>
+        <p>{{art.summary}}</p>
+        <hr/>
+    {% endfor %}
+</body>
+</html>
